@@ -61,19 +61,22 @@ System.register(['aurelia-framework', 'bootstrap-datepicker', 'aurelia-event-agg
       EventAggregator = _aureliaEventAggregator.EventAggregator;
     }, function (_aureliaBootstrapDatepickerCss) {}],
     execute: function () {
-      _export('AureliaBootstrapDatepicker', AureliaBootstrapDatepicker = (_dec = customElement('bootstrap-datepicker'), _dec2 = bindable('value'), _dec3 = inject(EventAggregator), _dec(_class = _dec2(_class = _dec3(_class = (_class2 = function () {
-        function AureliaBootstrapDatepicker(eventAggregator) {
+      _export('AureliaBootstrapDatepicker', AureliaBootstrapDatepicker = (_dec = customElement('bootstrap-datepicker'), _dec2 = bindable('value'), _dec3 = inject(Element, EventAggregator), _dec(_class = _dec2(_class = _dec3(_class = (_class2 = function () {
+        function AureliaBootstrapDatepicker(element, eventAggregator) {
           _classCallCheck(this, AureliaBootstrapDatepicker);
 
           _initDefineProp(this, 'dpOptions', _descriptor, this);
 
           this.eventAggregator = eventAggregator;
+          this.element = element;
         }
 
         AureliaBootstrapDatepicker.prototype.attached = function attached() {
           var self = this;
           $(this.datepicker).datepicker(this.dpOptions).on('changeDate', function (e) {
             self.eventAggregator.publish('DATEPICKER:changeDate', { event: e });
+            var changeDateEvent = new CustomEvent('changeDate', { detail: { event: e }, bubbles: true });
+            self.element.dispatchEvent(changeDateEvent);
           });
         };
 
