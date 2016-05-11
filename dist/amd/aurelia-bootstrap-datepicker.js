@@ -57,7 +57,7 @@ define(['exports', 'aurelia-framework', 'aurelia-event-aggregator', 'bootstrap-d
 
   var _dec, _dec2, _dec3, _class, _desc, _value, _class2, _descriptor;
 
-  var AureliaBootstrapDatepicker = exports.AureliaBootstrapDatepicker = (_dec = (0, _aureliaFramework.customElement)('bootstrap-datepicker'), _dec2 = (0, _aureliaFramework.bindable)("value"), _dec3 = (0, _aureliaFramework.inject)(_aureliaEventAggregator.EventAggregator), _dec(_class = _dec2(_class = _dec3(_class = (_class2 = function () {
+  var AureliaBootstrapDatepicker = exports.AureliaBootstrapDatepicker = (_dec = (0, _aureliaFramework.customElement)('bootstrap-datepicker'), _dec2 = (0, _aureliaFramework.bindable)('value'), _dec3 = (0, _aureliaFramework.inject)(_aureliaEventAggregator.EventAggregator), _dec(_class = _dec2(_class = _dec3(_class = (_class2 = function () {
     function AureliaBootstrapDatepicker(eventAggregator) {
       _classCallCheck(this, AureliaBootstrapDatepicker);
 

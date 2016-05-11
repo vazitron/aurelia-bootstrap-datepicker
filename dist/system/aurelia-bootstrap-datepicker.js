@@ -61,7 +61,7 @@ System.register(['aurelia-framework', 'bootstrap-datepicker', 'aurelia-event-agg
       EventAggregator = _aureliaEventAggregator.EventAggregator;
     }, function (_aureliaBootstrapDatepickerCss) {}],
     execute: function () {
-      _export('AureliaBootstrapDatepicker', AureliaBootstrapDatepicker = (_dec = customElement('bootstrap-datepicker'), _dec2 = bindable("value"), _dec3 = inject(EventAggregator), _dec(_class = _dec2(_class = _dec3(_class = (_class2 = function () {
+      _export('AureliaBootstrapDatepicker', AureliaBootstrapDatepicker = (_dec = customElement('bootstrap-datepicker'), _dec2 = bindable('value'), _dec3 = inject(EventAggregator), _dec(_class = _dec2(_class = _dec3(_class = (_class2 = function () {
         function AureliaBootstrapDatepicker(eventAggregator) {
           _classCallCheck(this, AureliaBootstrapDatepicker);
 

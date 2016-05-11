@@ -5,7 +5,7 @@ import {EventAggregator} from 'aurelia-event-aggregator';
 import './aurelia-bootstrap-datepicker.css';
 
 @customElement('bootstrap-datepicker')
-@bindable("value")
+@bindable('value')
 @inject(EventAggregator)
 export class AureliaBootstrapDatepicker {
   @bindable dpOptions;
@@ -17,8 +17,8 @@ export class AureliaBootstrapDatepicker {
   attached() {
     let self = this;
     $(this.datepicker).datepicker(this.dpOptions)
-      .on('changeDate', function (e) {
-        self.eventAggregator.publish('DATEPICKER:changeDate', {event: e})
+      .on('changeDate', function(e) {
+        self.eventAggregator.publish('DATEPICKER:changeDate', {event: e});
       });
   }
 }

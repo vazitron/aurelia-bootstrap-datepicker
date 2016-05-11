@@ -49,7 +49,7 @@ import { EventAggregator } from 'aurelia-event-aggregator';
 
 import './aurelia-bootstrap-datepicker.css';
 
-export let AureliaBootstrapDatepicker = (_dec = customElement('bootstrap-datepicker'), _dec2 = bindable("value"), _dec3 = inject(EventAggregator), _dec(_class = _dec2(_class = _dec3(_class = (_class2 = class AureliaBootstrapDatepicker {
+export let AureliaBootstrapDatepicker = (_dec = customElement('bootstrap-datepicker'), _dec2 = bindable('value'), _dec3 = inject(EventAggregator), _dec(_class = _dec2(_class = _dec3(_class = (_class2 = class AureliaBootstrapDatepicker {
 
   constructor(eventAggregator) {
     _initDefineProp(this, 'dpOptions', _descriptor, this);
