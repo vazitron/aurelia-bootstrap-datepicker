@@ -62,7 +62,7 @@ Simply use the tag
 You can use the following properties:
 
 * value - string - a date string, default format is 'mm-dd-yyyy'. otherwise the format specified in your dp-options
-* dp-options - object - an object containing the options for the datepicker. All possibilyties are found [here](http://bootstrap-datepicker.readthedocs.io/en/stable/options.html).
+* dp-options - object - an object containing the options for the datepicker. All possibilities are found [here](http://bootstrap-datepicker.readthedocs.io/en/stable/options.html).
 
 ## Events
 
