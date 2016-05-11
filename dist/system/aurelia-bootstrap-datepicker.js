@@ -71,7 +71,7 @@ System.register(['aurelia-framework', 'bootstrap-datepicker', './aurelia-bootstr
         AureliaBootstrapDatepicker.prototype.attached = function attached() {
           var self = this;
           $(this.datepicker).datepicker(this.dpOptions).on('changeDate', function (e) {
-            var changeDateEvent = new CustomEvent('changeDate', { detail: { event: e }, bubbles: true });
+            var changeDateEvent = new CustomEvent('changedate', { detail: { event: e }, bubbles: true });
             self.element.dispatchEvent(changeDateEvent);
           });
         };

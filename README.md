@@ -56,7 +56,7 @@ This library is a plugin and is not used by the core framework.
 Simply use the tag 
 
 ```html
-  <bootstrap-datpicker value.bind="'mm-dd-yyyy'" dp-options.bind="dpOptions"></bootstrap-datepicker>
+  <bootstrap-datpicker value.bind="'mm-dd-yyyy'" dp-options.bind="dpOptions" changedate.delegate="mychangedatefunction($event)"></bootstrap-datepicker>
 ```
 
 You can use the following properties:
@@ -68,4 +68,4 @@ You can use the following properties:
 
 You can subscribe to the following events:
 
-* changeDate - event - Fired when the date is changed. Payload consists of the event. **More Info:** [here](http://bootstrap-datepicker.readthedocs.io/en/stable/events.html)
+* changedate - event - Fired when the date is changed.git commi
