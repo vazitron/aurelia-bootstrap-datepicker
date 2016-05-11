@@ -11,8 +11,6 @@ var _aureliaFramework = require('aurelia-framework');
 
 require('bootstrap-datepicker');
 
-var _aureliaEventAggregator = require('aurelia-event-aggregator');
-
 require('./aurelia-bootstrap-datepicker.css');
 
 function _initDefineProp(target, property, descriptor, context) {
@@ -60,7 +58,7 @@ function _initializerWarningHelper(descriptor, context) {
   throw new Error('Decorating class property failed. Please ensure that transform-class-properties is enabled.');
 }
 
-var AureliaBootstrapDatepicker = exports.AureliaBootstrapDatepicker = (_dec = (0, _aureliaFramework.customElement)('bootstrap-datepicker'), _dec2 = (0, _aureliaFramework.bindable)('value'), _dec3 = (0, _aureliaFramework.inject)(Element, _aureliaEventAggregator.EventAggregator), _dec(_class = _dec2(_class = _dec3(_class = (_class2 = function () {
+var AureliaBootstrapDatepicker = exports.AureliaBootstrapDatepicker = (_dec = (0, _aureliaFramework.customElement)('bootstrap-datepicker'), _dec2 = (0, _aureliaFramework.bindable)('value'), _dec3 = (0, _aureliaFramework.inject)(Element, EventAggregator), _dec(_class = _dec2(_class = _dec3(_class = (_class2 = function () {
   function AureliaBootstrapDatepicker(element, eventAggregator) {
     _classCallCheck(this, AureliaBootstrapDatepicker);
 
@@ -73,7 +71,6 @@ var AureliaBootstrapDatepicker = exports.AureliaBootstrapDatepicker = (_dec = (0
   AureliaBootstrapDatepicker.prototype.attached = function attached() {
     var self = this;
     $(this.datepicker).datepicker(this.dpOptions).on('changeDate', function (e) {
-      self.eventAggregator.publish('DATEPICKER:changeDate', { event: e });
       var changeDateEvent = new CustomEvent('changeDate', { detail: { event: e }, bubbles: true });
       self.element.dispatchEvent(changeDateEvent);
     });

@@ -45,7 +45,6 @@ function _initializerWarningHelper(descriptor, context) {
 
 import { customElement, bindable, inject } from 'aurelia-framework';
 import 'bootstrap-datepicker';
-import { EventAggregator } from 'aurelia-event-aggregator';
 
 import './aurelia-bootstrap-datepicker.css';
 
@@ -61,7 +60,6 @@ export let AureliaBootstrapDatepicker = (_dec = customElement('bootstrap-datepic
   attached() {
     let self = this;
     $(this.datepicker).datepicker(this.dpOptions).on('changeDate', function (e) {
-      self.eventAggregator.publish('DATEPICKER:changeDate', { event: e });
       let changeDateEvent = new CustomEvent('changeDate', { detail: { event: e }, bubbles: true });
       self.element.dispatchEvent(changeDateEvent);
     });

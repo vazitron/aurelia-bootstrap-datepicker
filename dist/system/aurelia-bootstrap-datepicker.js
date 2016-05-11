@@ -1,7 +1,7 @@
 'use strict';
 
-System.register(['aurelia-framework', 'bootstrap-datepicker', 'aurelia-event-aggregator', './aurelia-bootstrap-datepicker.css'], function (_export, _context) {
-  var customElement, bindable, inject, EventAggregator, _dec, _dec2, _dec3, _class, _desc, _value, _class2, _descriptor, AureliaBootstrapDatepicker;
+System.register(['aurelia-framework', 'bootstrap-datepicker', './aurelia-bootstrap-datepicker.css'], function (_export, _context) {
+  var customElement, bindable, inject, _dec, _dec2, _dec3, _class, _desc, _value, _class2, _descriptor, AureliaBootstrapDatepicker;
 
   function _initDefineProp(target, property, descriptor, context) {
     if (!descriptor) return;
@@ -57,9 +57,7 @@ System.register(['aurelia-framework', 'bootstrap-datepicker', 'aurelia-event-agg
       customElement = _aureliaFramework.customElement;
       bindable = _aureliaFramework.bindable;
       inject = _aureliaFramework.inject;
-    }, function (_bootstrapDatepicker) {}, function (_aureliaEventAggregator) {
-      EventAggregator = _aureliaEventAggregator.EventAggregator;
-    }, function (_aureliaBootstrapDatepickerCss) {}],
+    }, function (_bootstrapDatepicker) {}, function (_aureliaBootstrapDatepickerCss) {}],
     execute: function () {
       _export('AureliaBootstrapDatepicker', AureliaBootstrapDatepicker = (_dec = customElement('bootstrap-datepicker'), _dec2 = bindable('value'), _dec3 = inject(Element, EventAggregator), _dec(_class = _dec2(_class = _dec3(_class = (_class2 = function () {
         function AureliaBootstrapDatepicker(element, eventAggregator) {
@@ -74,7 +72,6 @@ System.register(['aurelia-framework', 'bootstrap-datepicker', 'aurelia-event-agg
         AureliaBootstrapDatepicker.prototype.attached = function attached() {
           var self = this;
           $(this.datepicker).datepicker(this.dpOptions).on('changeDate', function (e) {
-            self.eventAggregator.publish('DATEPICKER:changeDate', { event: e });
             var changeDateEvent = new CustomEvent('changeDate', { detail: { event: e }, bubbles: true });
             self.element.dispatchEvent(changeDateEvent);
           });

@@ -1,6 +1,6 @@
 {
   "name": "aurelia-bootstrap-datepicker",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "An aurelia port for bootstrap-datepicker",
   "keywords": [
     "aurelia",
@@ -12,14 +12,14 @@
   ],
   "homepage": "http://itprosolutions.be",
   "bugs": {
-    "url": "https://github.com/itprosolutions/aurelia-bootstrap-datepicker/issues"
+    "url": "https://github.com/Itprosolutions/aurelia-bootstrap-datepicker/issues"
   },
   "license": "CC0-1.0",
   "author": "Thomas Seberechts <thomas@itprosolutions.be> (http://itprosolutions.be/)",
   "main": "dist/commonjs/index.js",
   "repository": {
     "type": "git",
-    "url": "http://github.com/itprosolutions/aurelia-bootstrap-datepicker"
+    "url": "http://github.com/Itprosolutions/aurelia-bootstrap-datepicker"
   },
   "devDependencies": {
     "aurelia-tools": "^0.1.18",
