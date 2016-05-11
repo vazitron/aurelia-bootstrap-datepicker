@@ -5,12 +5,11 @@ import './aurelia-bootstrap-datepicker.css';
 
 @customElement('bootstrap-datepicker')
 @bindable('value')
-@inject(Element, EventAggregator)
+@inject(Element)
 export class AureliaBootstrapDatepicker {
   @bindable dpOptions;
 
-  constructor(element, eventAggregator) {
-    this.eventAggregator = eventAggregator;
+  constructor(element) {
     this.element = element;
   }
 
