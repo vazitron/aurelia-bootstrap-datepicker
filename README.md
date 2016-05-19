@@ -56,7 +56,7 @@ This library is a plugin and is not used by the core framework.
 Simply use the tag 
 
 ```html
-  <bootstrap-datpicker value.bind="'mm-dd-yyyy'" dp-options.bind="dpOptions" changedate.delegate="mychangedatefunction($event)"></bootstrap-datepicker>
+  <bootstrap-datepicker value.bind="'mm-dd-yyyy'" dp-options.bind="dpOptions" changedate.delegate="mychangedatefunction($event)"></bootstrap-datepicker>
 ```
 
 You can use the following properties:
