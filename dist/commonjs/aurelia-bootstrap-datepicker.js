@@ -11,8 +11,6 @@ var _aureliaFramework = require('aurelia-framework');
 
 require('bootstrap-datepicker');
 
-require('./aurelia-bootstrap-datepicker.css');
-
 function _initDefineProp(target, property, descriptor, context) {
   if (!descriptor) return;
   Object.defineProperty(target, property, {

@@ -1,8 +1,6 @@
 import {customElement, bindable, inject} from 'aurelia-framework';
 import 'bootstrap-datepicker';
 
-import './aurelia-bootstrap-datepicker.css';
-
 @customElement('bootstrap-datepicker')
 @bindable('value')
 @inject(Element)

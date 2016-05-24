@@ -68,4 +68,4 @@ You can use the following properties:
 
 You can subscribe to the following events:
 
-* changedate - event - Fired when the date is changed.git commi
+* changedate - event - Fired when the date is changed.

@@ -1,6 +1,6 @@
 'use strict';
 
-System.register(['aurelia-framework', 'bootstrap-datepicker', './aurelia-bootstrap-datepicker.css'], function (_export, _context) {
+System.register(['aurelia-framework', 'bootstrap-datepicker'], function (_export, _context) {
   var customElement, bindable, inject, _dec, _dec2, _dec3, _class, _desc, _value, _class2, _descriptor, AureliaBootstrapDatepicker;
 
   function _initDefineProp(target, property, descriptor, context) {
@@ -57,7 +57,7 @@ System.register(['aurelia-framework', 'bootstrap-datepicker', './aurelia-bootstr
       customElement = _aureliaFramework.customElement;
       bindable = _aureliaFramework.bindable;
       inject = _aureliaFramework.inject;
-    }, function (_bootstrapDatepicker) {}, function (_aureliaBootstrapDatepickerCss) {}],
+    }, function (_bootstrapDatepicker) {}],
     execute: function () {
       _export('AureliaBootstrapDatepicker', AureliaBootstrapDatepicker = (_dec = customElement('bootstrap-datepicker'), _dec2 = bindable('value'), _dec3 = inject(Element), _dec(_class = _dec2(_class = _dec3(_class = (_class2 = function () {
         function AureliaBootstrapDatepicker(element) {
