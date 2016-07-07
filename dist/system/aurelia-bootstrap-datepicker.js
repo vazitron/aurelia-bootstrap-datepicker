@@ -3,7 +3,7 @@
 System.register(['aurelia-framework', 'bootstrap-datepicker'], function (_export, _context) {
   "use strict";
 
-  var customElement, bindable, inject, _dec, _dec2, _dec3, _class, _desc, _value, _class2, _descriptor, _descriptor2, AureliaBootstrapDatepicker;
+  var customElement, bindable, bindingMode, inject, _dec, _dec2, _dec3, _class, _desc, _value, _class2, _descriptor, _descriptor2, AureliaBootstrapDatepicker;
 
   function _initDefineProp(target, property, descriptor, context) {
     if (!descriptor) return;
@@ -58,6 +58,7 @@ System.register(['aurelia-framework', 'bootstrap-datepicker'], function (_export
     setters: [function (_aureliaFramework) {
       customElement = _aureliaFramework.customElement;
       bindable = _aureliaFramework.bindable;
+      bindingMode = _aureliaFramework.bindingMode;
       inject = _aureliaFramework.inject;
     }, function (_bootstrapDatepicker) {}],
     execute: function () {
