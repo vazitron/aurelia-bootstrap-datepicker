@@ -68,8 +68,8 @@ define(['exports', 'aurelia-framework', 'bootstrap-datepicker'], function (expor
 
     AureliaBootstrapDatepicker.prototype.attached = function attached() {
       var self = this;
-      $(this.datepicker).datepicker(this.dpOptions).on('changeDate', function (e) {
-        var changeDateEvent = new CustomEvent('changedate', { detail: { event: e }, bubbles: true });
+      $(this.datepicker).datepicker(this.dpOptions).on('change', function (e) {
+        var changeDateEvent = new Event('Event');
         self.element.dispatchEvent(changeDateEvent);
       });
     };

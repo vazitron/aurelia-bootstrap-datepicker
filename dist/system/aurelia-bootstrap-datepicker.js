@@ -1,6 +1,8 @@
 'use strict';
 
 System.register(['aurelia-framework', 'bootstrap-datepicker'], function (_export, _context) {
+  "use strict";
+
   var customElement, bindable, inject, _dec, _dec2, _dec3, _class, _desc, _value, _class2, _descriptor, AureliaBootstrapDatepicker;
 
   function _initDefineProp(target, property, descriptor, context) {
@@ -70,8 +72,8 @@ System.register(['aurelia-framework', 'bootstrap-datepicker'], function (_export
 
         AureliaBootstrapDatepicker.prototype.attached = function attached() {
           var self = this;
-          $(this.datepicker).datepicker(this.dpOptions).on('changeDate', function (e) {
-            var changeDateEvent = new CustomEvent('changedate', { detail: { event: e }, bubbles: true });
+          $(this.datepicker).datepicker(this.dpOptions).on('change', function (e) {
+            var changeDateEvent = new Event('Event');
             self.element.dispatchEvent(changeDateEvent);
           });
         };
