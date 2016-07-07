@@ -14,8 +14,8 @@ export class AureliaBootstrapDatepicker {
   attached() {
     let self = this;
     $(this.datepicker).datepicker(this.dpOptions)
-      .on('changeDate', function(e) {
-        let changeDateEvent = new CustomEvent('changedate', {detail: {event: e}, bubbles: true});
+      .on('change', function(e) {
+        let changeDateEvent = new Event('Event');
         self.element.dispatchEvent(changeDateEvent);
       });
   }
