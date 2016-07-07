@@ -53,14 +53,16 @@ export let AureliaBootstrapDatepicker = (_dec = customElement('bootstrap-datepic
 
     _initDefineProp(this, 'value', _descriptor2, this);
 
-    this.element = element;
+    this.element = this.datepicker;
     console.log(element);
+    console.log(this.element);
   }
 
   attached() {
     let self = this;
     $(this.datepicker).datepicker(this.dpOptions).on('change', function (e) {
-      let changeDateEvent = new Event('Event');
+      console.log('fire event');
+      let changeDateEvent = new Event('change');
       self.element.dispatchEvent(changeDateEvent);
     });
   }

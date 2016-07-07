@@ -64,14 +64,16 @@ var AureliaBootstrapDatepicker = exports.AureliaBootstrapDatepicker = (_dec = (0
 
     _initDefineProp(this, 'value', _descriptor2, this);
 
-    this.element = element;
+    this.element = this.datepicker;
     console.log(element);
+    console.log(this.element);
   }
 
   AureliaBootstrapDatepicker.prototype.attached = function attached() {
     var self = this;
     $(this.datepicker).datepicker(this.dpOptions).on('change', function (e) {
-      var changeDateEvent = new Event('Event');
+      console.log('fire event');
+      var changeDateEvent = new Event('change');
       self.element.dispatchEvent(changeDateEvent);
     });
   };
