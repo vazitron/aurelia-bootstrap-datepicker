@@ -1,6 +1,6 @@
 {
   "name": "aurelia-bootstrap-datepicker",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "An aurelia port for bootstrap-datepicker from ITprosolutions, adapted by Martin Rebane for simple binding",
   "keywords": [
     "aurelia",
