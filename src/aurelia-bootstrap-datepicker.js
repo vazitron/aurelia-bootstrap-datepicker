@@ -2,15 +2,9 @@ import {customElement, bindable, bindingMode, inject} from 'aurelia-framework';
 import 'bootstrap-datepicker';
 
 @customElement('bootstrap-datepicker')
-@inject(Element)
 export class AureliaBootstrapDatepicker {
   @bindable dpOptions;
   @bindable({ defaultBindingMode: bindingMode.twoWay }) value;
-
-  constructor(element) {
-    this.element = element;
-    console.log(element);
-  }
 
   attached() {
     let self = this;
