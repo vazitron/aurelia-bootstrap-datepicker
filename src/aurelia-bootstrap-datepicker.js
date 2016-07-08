@@ -8,18 +8,15 @@ export class AureliaBootstrapDatepicker {
   @bindable({ defaultBindingMode: bindingMode.twoWay }) value;
 
   constructor(element) {
-    this.element = this.datepicker;
+    this.element = element;
     console.log(element);
-    console.log(this.element);
   }
 
   attached() {
     let self = this;
     $(this.datepicker).datepicker(this.dpOptions)
       .on('change', function(e) {
-        console.log('fire event');
-        let changeDateEvent = new Event('change');
-        self.element.dispatchEvent(changeDateEvent);
+        self.value = self.datepicker.value;
       });
   }
 }
