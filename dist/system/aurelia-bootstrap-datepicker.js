@@ -3,7 +3,7 @@
 System.register(['aurelia-framework', 'bootstrap-datepicker'], function (_export, _context) {
   "use strict";
 
-  var customElement, bindable, bindingMode, inject, _dec, _dec2, _dec3, _class, _desc, _value, _class2, _descriptor, _descriptor2, AureliaBootstrapDatepicker;
+  var customElement, bindable, bindingMode, _dec, _dec2, _class, _desc, _value, _class2, _descriptor, _descriptor2, AureliaBootstrapDatepicker;
 
   function _initDefineProp(target, property, descriptor, context) {
     if (!descriptor) return;
@@ -59,19 +59,15 @@ System.register(['aurelia-framework', 'bootstrap-datepicker'], function (_export
       customElement = _aureliaFramework.customElement;
       bindable = _aureliaFramework.bindable;
       bindingMode = _aureliaFramework.bindingMode;
-      inject = _aureliaFramework.inject;
     }, function (_bootstrapDatepicker) {}],
     execute: function () {
-      _export('AureliaBootstrapDatepicker', AureliaBootstrapDatepicker = (_dec = customElement('bootstrap-datepicker'), _dec2 = inject(Element), _dec3 = bindable({ defaultBindingMode: bindingMode.twoWay }), _dec(_class = _dec2(_class = (_class2 = function () {
-        function AureliaBootstrapDatepicker(element) {
+      _export('AureliaBootstrapDatepicker', AureliaBootstrapDatepicker = (_dec = customElement('bootstrap-datepicker'), _dec2 = bindable({ defaultBindingMode: bindingMode.twoWay }), _dec(_class = (_class2 = function () {
+        function AureliaBootstrapDatepicker() {
           _classCallCheck(this, AureliaBootstrapDatepicker);
 
           _initDefineProp(this, 'dpOptions', _descriptor, this);
 
           _initDefineProp(this, 'value', _descriptor2, this);
-
-          this.element = element;
-          console.log(element);
         }
 
         AureliaBootstrapDatepicker.prototype.attached = function attached() {
@@ -85,10 +81,10 @@ System.register(['aurelia-framework', 'bootstrap-datepicker'], function (_export
       }(), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, 'dpOptions', [bindable], {
         enumerable: true,
         initializer: null
-      }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, 'value', [_dec3], {
+      }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, 'value', [_dec2], {
         enumerable: true,
         initializer: null
-      })), _class2)) || _class) || _class));
+      })), _class2)) || _class));
 
       _export('AureliaBootstrapDatepicker', AureliaBootstrapDatepicker);
     }
