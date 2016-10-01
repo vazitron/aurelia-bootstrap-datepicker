@@ -1,4 +1,4 @@
-define(['exports', 'aurelia-framework', 'bootstrap-datepicker'], function (exports, _aureliaFramework) {
+define(['exports', 'aurelia-framework', 'bootstrap-datepicker', 'bootstrap-datepicker/less/datepicker3.less!'], function (exports, _aureliaFramework) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {
@@ -68,7 +68,7 @@ define(['exports', 'aurelia-framework', 'bootstrap-datepicker'], function (expor
       var self = this;
       var jq = $(this.element);
       jq.datepicker(jq.data()).on('changeDate', function (e) {
-        self.value = self.datepicker.value;
+        self.value = e.date;
       });
     };
 

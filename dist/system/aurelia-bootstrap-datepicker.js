@@ -1,6 +1,6 @@
 'use strict';
 
-System.register(['aurelia-framework', 'bootstrap-datepicker'], function (_export, _context) {
+System.register(['aurelia-framework', 'bootstrap-datepicker', 'bootstrap-datepicker/less/datepicker3.less!'], function (_export, _context) {
   "use strict";
 
   var customElement, bindable, bindingMode, _dec, _dec2, _class, _desc, _value, _class2, _descriptor, AureliaBootstrapDatepicker;
@@ -59,7 +59,7 @@ System.register(['aurelia-framework', 'bootstrap-datepicker'], function (_export
       customElement = _aureliaFramework.customElement;
       bindable = _aureliaFramework.bindable;
       bindingMode = _aureliaFramework.bindingMode;
-    }, function (_bootstrapDatepicker) {}],
+    }, function (_bootstrapDatepicker) {}, function (_bootstrapDatepickerLessDatepicker3Less) {}],
     execute: function () {
       _export('AureliaBootstrapDatepicker', AureliaBootstrapDatepicker = (_dec = customElement('bootstrap-datepicker'), _dec2 = bindable({ defaultBindingMode: bindingMode.twoWay }), _dec(_class = (_class2 = function () {
         function AureliaBootstrapDatepicker() {
@@ -72,7 +72,7 @@ System.register(['aurelia-framework', 'bootstrap-datepicker'], function (_export
           var self = this;
           var jq = $(this.element);
           jq.datepicker(jq.data()).on('changeDate', function (e) {
-            self.value = self.datepicker.value;
+            self.value = e.date;
           });
         };
 

@@ -1,5 +1,6 @@
 import {customElement, bindable, bindingMode} from 'aurelia-framework';
 import 'bootstrap-datepicker';
+import 'bootstrap-datepicker/less/datepicker3.less!'
 
 @customElement('bootstrap-datepicker')
 export class AureliaBootstrapDatepicker {
@@ -10,7 +11,7 @@ export class AureliaBootstrapDatepicker {
     let jq = $(this.element);
     jq.datepicker(jq.data())
       .on('changeDate', function(e) {
-        self.value = self.datepicker.value;
+        self.value = e.date;
       });
   }
 }

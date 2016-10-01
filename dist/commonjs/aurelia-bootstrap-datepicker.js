@@ -11,6 +11,8 @@ var _aureliaFramework = require('aurelia-framework');
 
 require('bootstrap-datepicker');
 
+require('bootstrap-datepicker/less/datepicker3.less!');
+
 function _initDefineProp(target, property, descriptor, context) {
   if (!descriptor) return;
   Object.defineProperty(target, property, {
@@ -67,7 +69,7 @@ var AureliaBootstrapDatepicker = exports.AureliaBootstrapDatepicker = (_dec = (0
     var self = this;
     var jq = $(this.element);
     jq.datepicker(jq.data()).on('changeDate', function (e) {
-      self.value = self.datepicker.value;
+      self.value = e.date;
     });
   };
 

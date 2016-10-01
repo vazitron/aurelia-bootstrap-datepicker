@@ -45,6 +45,7 @@ function _initializerWarningHelper(descriptor, context) {
 
 import { customElement, bindable, bindingMode } from 'aurelia-framework';
 import 'bootstrap-datepicker';
+import 'bootstrap-datepicker/less/datepicker3.less!';
 
 export let AureliaBootstrapDatepicker = (_dec = customElement('bootstrap-datepicker'), _dec2 = bindable({ defaultBindingMode: bindingMode.twoWay }), _dec(_class = (_class2 = class AureliaBootstrapDatepicker {
   constructor() {
@@ -55,7 +56,7 @@ export let AureliaBootstrapDatepicker = (_dec = customElement('bootstrap-datepic
     let self = this;
     let jq = $(this.element);
     jq.datepicker(jq.data()).on('changeDate', function (e) {
-      self.value = self.datepicker.value;
+      self.value = e.date;
     });
   }
 }, (_descriptor = _applyDecoratedDescriptor(_class2.prototype, 'value', [_dec2], {
