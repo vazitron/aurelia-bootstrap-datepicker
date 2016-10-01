@@ -1,4 +1,4 @@
-define(['exports', 'aurelia-framework', 'bootstrap-datepicker', 'bootstrap-datepicker/dist/css/bootstrap-datepicker3.css!'], function (exports, _aureliaFramework) {
+define(['exports', 'aurelia-framework', 'bootstrap-datepicker'], function (exports, _aureliaFramework) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {

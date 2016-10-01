@@ -45,7 +45,6 @@ function _initializerWarningHelper(descriptor, context) {
 
 import { customElement, bindable, bindingMode } from 'aurelia-framework';
 import 'bootstrap-datepicker';
-import 'bootstrap-datepicker/dist/css/bootstrap-datepicker3.css!';
 
 export let AureliaBootstrapDatepicker = (_dec = customElement('bootstrap-datepicker'), _dec2 = bindable({ defaultBindingMode: bindingMode.twoWay }), _dec(_class = (_class2 = class AureliaBootstrapDatepicker {
   constructor() {
