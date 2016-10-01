@@ -1,6 +1,6 @@
 import {customElement, bindable, bindingMode} from 'aurelia-framework';
 import 'bootstrap-datepicker';
-import 'bootstrap-datepicker/less/datepicker3.less!'
+import 'bootstrap-datepicker/dist/css/bootstrap-datepicker3.css!'
 
 @customElement('bootstrap-datepicker')
 export class AureliaBootstrapDatepicker {
