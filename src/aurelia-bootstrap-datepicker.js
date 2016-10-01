@@ -3,13 +3,13 @@ import 'bootstrap-datepicker';
 
 @customElement('bootstrap-datepicker')
 export class AureliaBootstrapDatepicker {
-//  @bindable dpOptions;
   @bindable({ defaultBindingMode: bindingMode.twoWay }) value;
 
   attached() {
     let self = this;
-    $(this.datepicker)//.datepicker(this.dpOptions)
-      .on('change', function(e) {
+    let jq = $(this.datepicker);
+    jq.datepicker(jq.data())
+      .on('changeDate', function(e) {
         self.value = self.datepicker.value;
       });
   }

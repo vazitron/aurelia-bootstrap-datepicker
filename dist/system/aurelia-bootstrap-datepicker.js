@@ -70,7 +70,8 @@ System.register(['aurelia-framework', 'bootstrap-datepicker'], function (_export
 
         AureliaBootstrapDatepicker.prototype.attached = function attached() {
           var self = this;
-          $(this.datepicker).on('change', function (e) {
+          var jq = $(this.datepicker);
+          jq.datepicker(jq.data()).on('changeDate', function (e) {
             self.value = self.datepicker.value;
           });
         };
