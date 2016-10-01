@@ -1,4 +1,4 @@
-var _dec, _dec2, _class, _desc, _value, _class2, _descriptor, _descriptor2;
+var _dec, _dec2, _class, _desc, _value, _class2, _descriptor;
 
 function _initDefineProp(target, property, descriptor, context) {
   if (!descriptor) return;
@@ -48,21 +48,16 @@ import 'bootstrap-datepicker';
 
 export let AureliaBootstrapDatepicker = (_dec = customElement('bootstrap-datepicker'), _dec2 = bindable({ defaultBindingMode: bindingMode.twoWay }), _dec(_class = (_class2 = class AureliaBootstrapDatepicker {
   constructor() {
-    _initDefineProp(this, 'dpOptions', _descriptor, this);
-
-    _initDefineProp(this, 'value', _descriptor2, this);
+    _initDefineProp(this, 'value', _descriptor, this);
   }
 
   attached() {
     let self = this;
-    $(this.datepicker).datepicker(this.dpOptions).on('change', function (e) {
+    $(this.datepicker).on('change', function (e) {
       self.value = self.datepicker.value;
     });
   }
-}, (_descriptor = _applyDecoratedDescriptor(_class2.prototype, 'dpOptions', [bindable], {
-  enumerable: true,
-  initializer: null
-}), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, 'value', [_dec2], {
+}, (_descriptor = _applyDecoratedDescriptor(_class2.prototype, 'value', [_dec2], {
   enumerable: true,
   initializer: null
 })), _class2)) || _class);
