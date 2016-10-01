@@ -65,7 +65,7 @@ var AureliaBootstrapDatepicker = exports.AureliaBootstrapDatepicker = (_dec = (0
 
   AureliaBootstrapDatepicker.prototype.attached = function attached() {
     var self = this;
-    var jq = $(this.datepicker);
+    var jq = $(this.element);
     jq.datepicker(jq.data()).on('changeDate', function (e) {
       self.value = self.datepicker.value;
     });
