@@ -88,15 +88,15 @@ var AureliaBootstrapDatepicker = exports.AureliaBootstrapDatepicker = (_dec = (0
   };
 
   AureliaBootstrapDatepicker.prototype.transformOptions = function transformOptions(jqElem) {
-    if (jqElem.data('dateMinToday')) {
+    if (jqElem.attr('data-date-min-today')) {
       jqElem.datepicker('startDate', new Date());
     }
 
-    if (jqElem.data('dateMaxToday')) {
+    if (jqElem.attr('data-date-max-today')) {
       jqElem.datepicker('endDate', new Date());
     }
 
-    if (jqElem.data('dateBirthday')) {
+    if (jqElem.attr('data-date-birthday')) {
       var date = new Date();
       date.setFullYear(date.getFullYear() - 18);
       jqElem.datepicker('endDate', date);
