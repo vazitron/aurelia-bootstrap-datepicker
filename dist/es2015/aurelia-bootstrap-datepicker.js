@@ -76,15 +76,15 @@ export let AureliaBootstrapDatepicker = (_dec = customElement('bootstrap-datepic
   }
 
   transformOptions(jqElem) {
-    if (jqElem.data('date-min-today')) {
+    if (jqElem.data('dateMinToday')) {
       jqElem.datepicker('startDate', new Date());
     }
 
-    if (jqElem.data('date-max-today')) {
+    if (jqElem.data('dateMaxToday')) {
       jqElem.datepicker('endDate', new Date());
     }
 
-    if (jqElem.data('date-birthday')) {
+    if (jqElem.data('dateBirthday')) {
       let date = new Date();
       date.setFullYear(date.getFullYear() - 18);
       jqElem.datepicker('endDate', date);
