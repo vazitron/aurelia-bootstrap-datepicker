@@ -93,17 +93,17 @@ System.register(['aurelia-framework', 'bootstrap-datepicker', 'bootstrap-datepic
 
         AureliaBootstrapDatepicker.prototype.transformOptions = function transformOptions(jqElem) {
           if (jqElem.is('[data-date-min-today]')) {
-            jqElem.datepicker('startDate', new Date());
+            jqElem.datepicker().setStartDate(new Date());
           }
 
           if (jqElem.is('[data-date-max-today]')) {
-            jqElem.datepicker('endDate', new Date());
+            jqElem.datepicker().setEndDate(new Date());
           }
 
           if (jqElem.is('[data-date-birthday]')) {
             var date = new Date();
             date.setFullYear(date.getFullYear() - 18);
-            jqElem.datepicker('endDate', date);
+            jqElem.datepicker().setEndDate(date);
           }
         };
 

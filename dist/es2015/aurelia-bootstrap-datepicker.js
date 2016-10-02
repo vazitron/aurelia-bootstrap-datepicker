@@ -77,17 +77,17 @@ export let AureliaBootstrapDatepicker = (_dec = customElement('bootstrap-datepic
 
   transformOptions(jqElem) {
     if (jqElem.is('[data-date-min-today]')) {
-      jqElem.datepicker('startDate', new Date());
+      jqElem.datepicker().setStartDate(new Date());
     }
 
     if (jqElem.is('[data-date-max-today]')) {
-      jqElem.datepicker('endDate', new Date());
+      jqElem.datepicker().setEndDate(new Date());
     }
 
     if (jqElem.is('[data-date-birthday]')) {
       let date = new Date();
       date.setFullYear(date.getFullYear() - 18);
-      jqElem.datepicker('endDate', date);
+      jqElem.datepicker().setEndDate(date);
     }
   }
 }, (_descriptor = _applyDecoratedDescriptor(_class2.prototype, 'value', [_dec3], {
