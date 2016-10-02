@@ -60,16 +60,18 @@ export let AureliaBootstrapDatepicker = (_dec = customElement('bootstrap-datepic
     let self = this;
     let jq = $(this.element);
     this.transformOptions(jq);
-    jq.datepicker(jq.data()).on('changeDate', function (e) {
-      let changeEvent = new CustomEvent('input', {
-        detail: {
-          value: e.date
-        },
-        bubbles: true
-      });
+    jq.datepicker(jq.data()).on('changeDate', function (e) {});
+  }
 
-      self.element.dispatchEvent(changeEvent);
+  dateChanged(date) {
+    let changeEvent = new CustomEvent('input', {
+      detail: {
+        value: date
+      },
+      bubbles: true
     });
+
+    this.element.dispatchEvent(changeEvent);
   }
 
   detached() {

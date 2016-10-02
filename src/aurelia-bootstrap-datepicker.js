@@ -18,15 +18,18 @@ export class AureliaBootstrapDatepicker {
     this.transformOptions(jq)
     jq.datepicker(jq.data())
       .on('changeDate', function(e) {
-        let changeEvent = new CustomEvent('input', {
-            detail: {
-                value: e.date
-            },
-            bubbles: true
-        });
-  
-        self.element.dispatchEvent(changeEvent);
       });
+  }
+  
+  dateChanged(date) {
+    let changeEvent = new CustomEvent('input', {
+        detail: {
+            value: date
+        },
+        bubbles: true
+    });
+  
+    this.element.dispatchEvent(changeEvent);
   }
 
   detached() {

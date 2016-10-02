@@ -77,16 +77,18 @@ System.register(['aurelia-framework', 'jquery', 'bootstrap-datepicker', 'bootstr
           var self = this;
           var jq = $(this.element);
           this.transformOptions(jq);
-          jq.datepicker(jq.data()).on('changeDate', function (e) {
-            var changeEvent = new CustomEvent('input', {
-              detail: {
-                value: e.date
-              },
-              bubbles: true
-            });
+          jq.datepicker(jq.data()).on('changeDate', function (e) {});
+        };
 
-            self.element.dispatchEvent(changeEvent);
+        AureliaBootstrapDatepicker.prototype.dateChanged = function dateChanged(date) {
+          var changeEvent = new CustomEvent('input', {
+            detail: {
+              value: date
+            },
+            bubbles: true
           });
+
+          this.element.dispatchEvent(changeEvent);
         };
 
         AureliaBootstrapDatepicker.prototype.detached = function detached() {
