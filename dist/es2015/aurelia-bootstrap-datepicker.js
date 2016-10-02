@@ -60,7 +60,9 @@ export let AureliaBootstrapDatepicker = (_dec = customElement('bootstrap-datepic
     let self = this;
     let jq = $(this.element);
     this.transformOptions(jq);
-    jq.datepicker(jq.data()).on('changeDate', function (e) {});
+    jq.datepicker(jq.data()).on('changeDate', function (e) {
+      this.dateChanged(e.date);
+    });
   }
 
   dateChanged(date) {
