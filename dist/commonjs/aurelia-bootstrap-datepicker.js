@@ -9,9 +9,15 @@ var _dec, _dec2, _dec3, _class, _desc, _value, _class2, _descriptor;
 
 var _aureliaFramework = require('aurelia-framework');
 
+var _jquery = require('jquery');
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
 require('bootstrap-datepicker');
 
 require('bootstrap-datepicker/dist/css/bootstrap-datepicker3.css!');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _initDefineProp(target, property, descriptor, context) {
   if (!descriptor) return;
@@ -69,7 +75,7 @@ var AureliaBootstrapDatepicker = exports.AureliaBootstrapDatepicker = (_dec = (0
 
   AureliaBootstrapDatepicker.prototype.attached = function attached() {
     var self = this;
-    var jq = $(this.element);
+    var jq = (0, _jquery2.default)(this.element);
     this.transformOptions(jq);
     jq.datepicker(jq.data()).on('changeDate', function (e) {
       var changeEvent = new CustomEvent('input', {
@@ -84,7 +90,7 @@ var AureliaBootstrapDatepicker = exports.AureliaBootstrapDatepicker = (_dec = (0
   };
 
   AureliaBootstrapDatepicker.prototype.detached = function detached() {
-    $(this.element).datepicker('destroy').off('changeDate');
+    (0, _jquery2.default)(this.element).datepicker('destroy').off('changeDate');
   };
 
   AureliaBootstrapDatepicker.prototype.transformOptions = function transformOptions(jqElem) {

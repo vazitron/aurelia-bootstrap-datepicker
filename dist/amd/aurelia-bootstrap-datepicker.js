@@ -1,10 +1,18 @@
-define(['exports', 'aurelia-framework', 'bootstrap-datepicker', 'bootstrap-datepicker/dist/css/bootstrap-datepicker3.css!'], function (exports, _aureliaFramework) {
+define(['exports', 'aurelia-framework', 'jquery', 'bootstrap-datepicker', 'bootstrap-datepicker/dist/css/bootstrap-datepicker3.css!'], function (exports, _aureliaFramework, _jquery) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
   exports.AureliaBootstrapDatepicker = undefined;
+
+  var _jquery2 = _interopRequireDefault(_jquery);
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+      default: obj
+    };
+  }
 
   function _initDefineProp(target, property, descriptor, context) {
     if (!descriptor) return;
@@ -68,7 +76,7 @@ define(['exports', 'aurelia-framework', 'bootstrap-datepicker', 'bootstrap-datep
 
     AureliaBootstrapDatepicker.prototype.attached = function attached() {
       var self = this;
-      var jq = $(this.element);
+      var jq = (0, _jquery2.default)(this.element);
       this.transformOptions(jq);
       jq.datepicker(jq.data()).on('changeDate', function (e) {
         var changeEvent = new CustomEvent('input', {
@@ -83,7 +91,7 @@ define(['exports', 'aurelia-framework', 'bootstrap-datepicker', 'bootstrap-datep
     };
 
     AureliaBootstrapDatepicker.prototype.detached = function detached() {
-      $(this.element).datepicker('destroy').off('changeDate');
+      (0, _jquery2.default)(this.element).datepicker('destroy').off('changeDate');
     };
 
     AureliaBootstrapDatepicker.prototype.transformOptions = function transformOptions(jqElem) {

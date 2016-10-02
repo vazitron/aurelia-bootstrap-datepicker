@@ -44,6 +44,7 @@ function _initializerWarningHelper(descriptor, context) {
 }
 
 import { inject, customElement, bindable, bindingMode } from 'aurelia-framework';
+import $ from 'jquery';
 import 'bootstrap-datepicker';
 import 'bootstrap-datepicker/dist/css/bootstrap-datepicker3.css!';
 
