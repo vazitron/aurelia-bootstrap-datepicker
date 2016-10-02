@@ -33,15 +33,15 @@ export class AureliaBootstrapDatepicker {
   }
   
   transformOptions(jqElem) {
-    if (jqElem.attr('data-date-min-today')) {
+    if (jqElem.is('[data-date-min-today]')) {
       jqElem.datepicker('startDate', new Date())
     }
     
-    if (jqElem.attr('data-date-max-today')) {
+    if (jqElem.is('[data-date-max-today]')) {
       jqElem.datepicker('endDate', new Date())
     }
     
-    if (jqElem.attr('data-date-birthday')) {
+    if (jqElem.is('[data-date-birthday]')) {
       let date = new Date()
       date.setFullYear(date.getFullYear() - 18)
       jqElem.datepicker('endDate', date);
