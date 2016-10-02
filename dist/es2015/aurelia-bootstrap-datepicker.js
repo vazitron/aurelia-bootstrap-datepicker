@@ -58,7 +58,6 @@ export let AureliaBootstrapDatepicker = (_dec = customElement('bootstrap-datepic
   attached() {
     let self = this;
     let jq = $(this.element);
-    this.transformOptions(jq);
     jq.datepicker(jq.data()).on('changeDate', function (e) {
       let changeEvent = new CustomEvent('input', {
         detail: {
@@ -69,6 +68,7 @@ export let AureliaBootstrapDatepicker = (_dec = customElement('bootstrap-datepic
 
       self.element.dispatchEvent(changeEvent);
     });
+    this.transformOptions(jq);
   }
 
   detached() {
@@ -77,15 +77,17 @@ export let AureliaBootstrapDatepicker = (_dec = customElement('bootstrap-datepic
 
   transformOptions(jqElem) {
     if (jqElem.data('date-min-today')) {
-      jqElem.data('date-start-date', '0d');
+      jqElem.datepicker('startDate', new Date());
     }
+
     if (jqElem.data('date-max-today')) {
-      jqElem.data('date-end-date', '0d');
+      jqElem.datepicker('endDate', new Date());
     }
+
     if (jqElem.data('date-birthday')) {
       let date = new Date();
-      let todayMinus18 = date.getDate() + "/" + (date.getMonth() + 1) + "/" + (date.getFullYear() - 18);
-      jqElem.data('date-end-date', todayMinus18);
+      date.setFullYear(date.getFullYear() - 18);
+      jqElem.datepicker('endDate', date);
     }
   }
 }, (_descriptor = _applyDecoratedDescriptor(_class2.prototype, 'value', [_dec3], {

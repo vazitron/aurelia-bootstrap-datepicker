@@ -70,7 +70,6 @@ var AureliaBootstrapDatepicker = exports.AureliaBootstrapDatepicker = (_dec = (0
   AureliaBootstrapDatepicker.prototype.attached = function attached() {
     var self = this;
     var jq = $(this.element);
-    this.transformOptions(jq);
     jq.datepicker(jq.data()).on('changeDate', function (e) {
       var changeEvent = new CustomEvent('input', {
         detail: {
@@ -81,6 +80,7 @@ var AureliaBootstrapDatepicker = exports.AureliaBootstrapDatepicker = (_dec = (0
 
       self.element.dispatchEvent(changeEvent);
     });
+    this.transformOptions(jq);
   };
 
   AureliaBootstrapDatepicker.prototype.detached = function detached() {
@@ -89,15 +89,17 @@ var AureliaBootstrapDatepicker = exports.AureliaBootstrapDatepicker = (_dec = (0
 
   AureliaBootstrapDatepicker.prototype.transformOptions = function transformOptions(jqElem) {
     if (jqElem.data('date-min-today')) {
-      jqElem.data('date-start-date', '0d');
+      jqElem.datepicker('startDate', new Date());
     }
+
     if (jqElem.data('date-max-today')) {
-      jqElem.data('date-end-date', '0d');
+      jqElem.datepicker('endDate', new Date());
     }
+
     if (jqElem.data('date-birthday')) {
       var date = new Date();
-      var todayMinus18 = date.getDate() + "/" + (date.getMonth() + 1) + "/" + (date.getFullYear() - 18);
-      jqElem.data('date-end-date', todayMinus18);
+      date.setFullYear(date.getFullYear() - 18);
+      jqElem.datepicker('endDate', date);
     }
   };
 
