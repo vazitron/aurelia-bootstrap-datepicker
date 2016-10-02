@@ -55,8 +55,19 @@ export let AureliaBootstrapDatepicker = (_dec = customElement('bootstrap-datepic
     let self = this;
     let jq = $(this.element);
     jq.datepicker(jq.data()).on('changeDate', function (e) {
-      self.value = e.date;
+      let changeEvent = new CustomEvent('input', {
+        detail: {
+          value: e.val
+        },
+        bubbles: true
+      });
+
+      this.element.dispatchEvent(changeEvent);
     });
+  }
+
+  detached() {
+    $(this.element).datepicker('destroy').off('changeDate');
   }
 }, (_descriptor = _applyDecoratedDescriptor(_class2.prototype, 'value', [_dec2], {
   enumerable: true,
