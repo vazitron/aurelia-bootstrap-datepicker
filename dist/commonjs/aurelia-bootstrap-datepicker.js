@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.AureliaBootstrapDatepicker = undefined;
 
-var _dec, _dec2, _class, _desc, _value, _class2, _descriptor;
+var _dec, _dec2, _dec3, _class, _desc, _value, _class2, _descriptor;
 
 var _aureliaFramework = require('aurelia-framework');
 
@@ -58,11 +58,13 @@ function _initializerWarningHelper(descriptor, context) {
   throw new Error('Decorating class property failed. Please ensure that transform-class-properties is enabled.');
 }
 
-var AureliaBootstrapDatepicker = exports.AureliaBootstrapDatepicker = (_dec = (0, _aureliaFramework.customElement)('bootstrap-datepicker'), _dec2 = (0, _aureliaFramework.bindable)({ defaultBindingMode: _aureliaFramework.bindingMode.twoWay }), _dec(_class = (_class2 = function () {
-  function AureliaBootstrapDatepicker() {
+var AureliaBootstrapDatepicker = exports.AureliaBootstrapDatepicker = (_dec = (0, _aureliaFramework.customElement)('bootstrap-datepicker'), _dec2 = inject(Element), _dec3 = (0, _aureliaFramework.bindable)({ defaultBindingMode: _aureliaFramework.bindingMode.twoWay }), _dec(_class = _dec2(_class = (_class2 = function () {
+  function AureliaBootstrapDatepicker(element) {
     _classCallCheck(this, AureliaBootstrapDatepicker);
 
     _initDefineProp(this, 'value', _descriptor, this);
+
+    this.element = element;
   }
 
   AureliaBootstrapDatepicker.prototype.attached = function attached() {
@@ -85,7 +87,7 @@ var AureliaBootstrapDatepicker = exports.AureliaBootstrapDatepicker = (_dec = (0
   };
 
   return AureliaBootstrapDatepicker;
-}(), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, 'value', [_dec2], {
+}(), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, 'value', [_dec3], {
   enumerable: true,
   initializer: null
-})), _class2)) || _class);
+})), _class2)) || _class) || _class);
