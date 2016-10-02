@@ -18,12 +18,12 @@ export class AureliaBootstrapDatepicker {
       .on('changeDate', function(e) {
         let changeEvent = new CustomEvent('input', {
             detail: {
-                value: e.val
+                value: e.date
             },
             bubbles: true
         });
   
-        this.element.dispatchEvent(changeEvent);
+        self.element.dispatchEvent(changeEvent);
       });
   }
 

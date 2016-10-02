@@ -73,12 +73,12 @@ var AureliaBootstrapDatepicker = exports.AureliaBootstrapDatepicker = (_dec = (0
     jq.datepicker(jq.data()).on('changeDate', function (e) {
       var changeEvent = new CustomEvent('input', {
         detail: {
-          value: e.val
+          value: e.date
         },
         bubbles: true
       });
 
-      this.element.dispatchEvent(changeEvent);
+      self.element.dispatchEvent(changeEvent);
     });
   };
 
