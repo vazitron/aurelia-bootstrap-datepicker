@@ -18,7 +18,7 @@ export class AureliaBootstrapDatepicker {
     this.transformOptions(jq)
     jq.datepicker(jq.data())
       .on('changeDate', function(e) {
-        this.dateChanged(e.date)
+        self.dateChanged(e.date)
       });
   }
   

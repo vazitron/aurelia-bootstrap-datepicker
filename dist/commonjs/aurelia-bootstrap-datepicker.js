@@ -78,7 +78,7 @@ var AureliaBootstrapDatepicker = exports.AureliaBootstrapDatepicker = (_dec = (0
     var jq = (0, _jquery2.default)(this.element);
     this.transformOptions(jq);
     jq.datepicker(jq.data()).on('changeDate', function (e) {
-      this.dateChanged(e.date);
+      self.dateChanged(e.date);
     });
   };
 
