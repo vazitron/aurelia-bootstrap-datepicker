@@ -69,6 +69,7 @@ define(['exports', 'aurelia-framework', 'bootstrap-datepicker', 'bootstrap-datep
     AureliaBootstrapDatepicker.prototype.attached = function attached() {
       var self = this;
       var jq = $(this.element);
+      transformOptions(jq);
       jq.datepicker(jq.data()).on('changeDate', function (e) {
         var changeEvent = new CustomEvent('input', {
           detail: {
@@ -83,6 +84,20 @@ define(['exports', 'aurelia-framework', 'bootstrap-datepicker', 'bootstrap-datep
 
     AureliaBootstrapDatepicker.prototype.detached = function detached() {
       $(this.element).datepicker('destroy').off('changeDate');
+    };
+
+    AureliaBootstrapDatepicker.prototype.transformOption = function transformOption(jqElem) {
+      if (jqElem.data('date-min-today')) {
+        jqElem.data('date-start-date', '0d');
+      }
+      if (jqElem.data('date-max-today')) {
+        jqElem.data('date-end-date', '0d');
+      }
+      if (jqElem.data('date-birthday')) {
+        var date = new Date();
+        var todayMinus18 = date.getDate() + "/" + (date.getMonth() + 1) + "/" + (date.getFullYear() - 18);
+        jqElem.data('date-end-date', todayMinus18);
+      }
     };
 
     return AureliaBootstrapDatepicker;
