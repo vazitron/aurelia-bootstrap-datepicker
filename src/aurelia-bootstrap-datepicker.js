@@ -32,7 +32,7 @@ export class AureliaBootstrapDatepicker {
     $(this.element).datepicker('destroy').off('changeDate');
   }
   
-  transformOption(jqElem) {
+  transformOptions(jqElem) {
     if (jqElem.data('date-min-today')) {
       jqElem.data('date-start-date', '0d')
     }

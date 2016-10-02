@@ -86,7 +86,7 @@ define(['exports', 'aurelia-framework', 'bootstrap-datepicker', 'bootstrap-datep
       $(this.element).datepicker('destroy').off('changeDate');
     };
 
-    AureliaBootstrapDatepicker.prototype.transformOption = function transformOption(jqElem) {
+    AureliaBootstrapDatepicker.prototype.transformOptions = function transformOptions(jqElem) {
       if (jqElem.data('date-min-today')) {
         jqElem.data('date-start-date', '0d');
       }
