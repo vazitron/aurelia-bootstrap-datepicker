@@ -16,7 +16,7 @@ System.config({
     "aurelia-polyfills": "npm:aurelia-polyfills@1.1.1",
     "babel": "npm:babel-core@5.8.38",
     "babel-runtime": "npm:babel-runtime@5.8.38",
-    "bootstrap-datetimepicker": "github:smalot/bootstrap-datetimepicker@2.3.11",
+    "bootstrap-datetime-picker": "npm:bootstrap-datetime-picker@2.3.10",
     "core-js": "npm:core-js@1.2.7",
     "jquery": "npm:jquery@3.1.1",
     "github:jspm/nodelibs-assert@0.1.0": {
