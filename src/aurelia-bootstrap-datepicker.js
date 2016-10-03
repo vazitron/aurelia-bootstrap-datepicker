@@ -1,7 +1,7 @@
 import {inject, customElement, bindable, bindingMode} from 'aurelia-framework';
 import $ from 'jquery';
-import 'bootstrap-datepicker';
-import 'bootstrap-datepicker/dist/css/bootstrap-datepicker3.css!'
+import 'bootstrap-datetimepicker';
+import 'bootstrap-datetimepicker/css/bootstrap-datetimepicker.css!'
 
 @customElement('bootstrap-datepicker')
 @inject(Element)
