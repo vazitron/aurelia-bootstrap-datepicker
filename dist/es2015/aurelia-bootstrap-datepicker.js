@@ -45,8 +45,8 @@ function _initializerWarningHelper(descriptor, context) {
 
 import { inject, customElement, bindable, bindingMode } from 'aurelia-framework';
 import $ from 'jquery';
-import 'bootstrap-datepicker';
-import 'bootstrap-datepicker/dist/css/bootstrap-datepicker3.css!';
+import 'bootstrap-datetime-picker';
+import 'bootstrap-datetime-picker/css/bootstrap-datetimepicker.css!';
 
 export let AureliaBootstrapDatepicker = (_dec = customElement('bootstrap-datepicker'), _dec2 = inject(Element), _dec3 = bindable({ defaultBindingMode: bindingMode.twoWay }), _dec(_class = _dec2(_class = (_class2 = class AureliaBootstrapDatepicker {
 
@@ -60,7 +60,7 @@ export let AureliaBootstrapDatepicker = (_dec = customElement('bootstrap-datepic
     let self = this;
     let jq = $(this.element);
     this.transformOptions(jq);
-    jq.datepicker(jq.data()).on('changeDate', function (e) {
+    jq.datetimepicker(jq.data()).on('changeDate', function (e) {
       self.dateChanged(e.date);
     });
   }

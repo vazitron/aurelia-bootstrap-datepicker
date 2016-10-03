@@ -1,7 +1,7 @@
 import {inject, customElement, bindable, bindingMode} from 'aurelia-framework';
 import $ from 'jquery';
-import 'bootstrap-datetimepicker';
-import 'bootstrap-datetimepicker/css/bootstrap-datetimepicker.css!'
+import 'bootstrap-datetime-picker';
+import 'bootstrap-datetime-picker/css/bootstrap-datetimepicker.css!'
 
 @customElement('bootstrap-datepicker')
 @inject(Element)
@@ -16,7 +16,7 @@ export class AureliaBootstrapDatepicker {
     let self = this;
     let jq = $(this.element);
     this.transformOptions(jq)
-    jq.datepicker(jq.data())
+    jq.datetimepicker(jq.data())
       .on('changeDate', function(e) {
         self.dateChanged(e.date)
       });
