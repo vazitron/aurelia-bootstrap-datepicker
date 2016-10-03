@@ -1,6 +1,6 @@
 'use strict';
 
-System.register(['aurelia-framework', 'jquery', 'bootstrap-datepicker', 'bootstrap-datepicker/dist/css/bootstrap-datepicker3.css!'], function (_export, _context) {
+System.register(['aurelia-framework', 'jquery', 'bootstrap-datetimepicker', 'bootstrap-datetimepicker/css/bootstrap-datetimepicker.css!'], function (_export, _context) {
   "use strict";
 
   var inject, customElement, bindable, bindingMode, $, _dec, _dec2, _dec3, _class, _desc, _value, _class2, _descriptor, AureliaBootstrapDatepicker;
@@ -62,7 +62,7 @@ System.register(['aurelia-framework', 'jquery', 'bootstrap-datepicker', 'bootstr
       bindingMode = _aureliaFramework.bindingMode;
     }, function (_jquery) {
       $ = _jquery.default;
-    }, function (_bootstrapDatepicker) {}, function (_bootstrapDatepickerDistCssBootstrapDatepicker3Css) {}],
+    }, function (_bootstrapDatetimepicker) {}, function (_bootstrapDatetimepickerCssBootstrapDatetimepickerCss) {}],
     execute: function () {
       _export('AureliaBootstrapDatepicker', AureliaBootstrapDatepicker = (_dec = customElement('bootstrap-datepicker'), _dec2 = inject(Element), _dec3 = bindable({ defaultBindingMode: bindingMode.twoWay }), _dec(_class = _dec2(_class = (_class2 = function () {
         function AureliaBootstrapDatepicker(element) {
@@ -77,7 +77,7 @@ System.register(['aurelia-framework', 'jquery', 'bootstrap-datepicker', 'bootstr
           var self = this;
           var jq = $(this.element);
           this.transformOptions(jq);
-          jq.datepicker(jq.data()).on('changeDate', function (e) {
+          jq.datetimepicker(jq.data()).on('changeDate', function (e) {
             self.dateChanged(e.date);
           });
         };

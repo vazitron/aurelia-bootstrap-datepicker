@@ -1,4 +1,4 @@
-define(['exports', 'aurelia-framework', 'jquery', 'bootstrap-datepicker', 'bootstrap-datepicker/dist/css/bootstrap-datepicker3.css!'], function (exports, _aureliaFramework, _jquery) {
+define(['exports', 'aurelia-framework', 'jquery', 'bootstrap-datetimepicker', 'bootstrap-datetimepicker/css/bootstrap-datetimepicker.css!'], function (exports, _aureliaFramework, _jquery) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {
@@ -78,7 +78,7 @@ define(['exports', 'aurelia-framework', 'jquery', 'bootstrap-datepicker', 'boots
       var self = this;
       var jq = (0, _jquery2.default)(this.element);
       this.transformOptions(jq);
-      jq.datepicker(jq.data()).on('changeDate', function (e) {
+      jq.datetimepicker(jq.data()).on('changeDate', function (e) {
         self.dateChanged(e.date);
       });
     };

@@ -13,9 +13,9 @@ var _jquery = require('jquery');
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-require('bootstrap-datepicker');
+require('bootstrap-datetimepicker');
 
-require('bootstrap-datepicker/dist/css/bootstrap-datepicker3.css!');
+require('bootstrap-datetimepicker/css/bootstrap-datetimepicker.css!');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -77,7 +77,7 @@ var AureliaBootstrapDatepicker = exports.AureliaBootstrapDatepicker = (_dec = (0
     var self = this;
     var jq = (0, _jquery2.default)(this.element);
     this.transformOptions(jq);
-    jq.datepicker(jq.data()).on('changeDate', function (e) {
+    jq.datetimepicker(jq.data()).on('changeDate', function (e) {
       self.dateChanged(e.date);
     });
   };
