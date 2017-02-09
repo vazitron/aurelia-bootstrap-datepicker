@@ -3,7 +3,7 @@
 System.register(['aurelia-framework', 'jquery', 'bootstrap-datepicker', 'bootstrap-datepicker/dist/css/bootstrap-datepicker3.css!'], function (_export, _context) {
   "use strict";
 
-  var inject, customElement, bindable, bindingMode, $, _dec, _dec2, _dec3, _class, _desc, _value, _class2, _descriptor, AureliaBootstrapDatepicker;
+  var inject, customElement, bindable, bindingMode, $, _dec, _dec2, _dec3, _class, _desc, _value, _class2, _descriptor, _descriptor2, AureliaBootstrapDatepicker;
 
   function _initDefineProp(target, property, descriptor, context) {
     if (!descriptor) return;
@@ -70,6 +70,8 @@ System.register(['aurelia-framework', 'jquery', 'bootstrap-datepicker', 'bootstr
 
           _initDefineProp(this, 'value', _descriptor, this);
 
+          _initDefineProp(this, 'placeholder', _descriptor2, this);
+
           this.element = element;
         }
 
@@ -115,6 +117,9 @@ System.register(['aurelia-framework', 'jquery', 'bootstrap-datepicker', 'bootstr
 
         return AureliaBootstrapDatepicker;
       }(), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, 'value', [_dec3], {
+        enumerable: true,
+        initializer: null
+      }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, 'placeholder', [bindable], {
         enumerable: true,
         initializer: null
       })), _class2)) || _class) || _class));

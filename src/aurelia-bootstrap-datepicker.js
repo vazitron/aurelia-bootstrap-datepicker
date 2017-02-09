@@ -7,6 +7,7 @@ import 'bootstrap-datepicker/dist/css/bootstrap-datepicker3.css!'
 @inject(Element)
 export class AureliaBootstrapDatepicker {
   @bindable({ defaultBindingMode: bindingMode.twoWay }) value;
+  @bindable placeholder;
   
   constructor(element) {
     this.element = element
